@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif; /* define fontes usadas*/
+    margin: 0; /* remove as margens*/
+    padding: 0; /* remove o preenchimento do body */
+    line-height: 1.6; /* define a altura da linha como 1.6 */
+}
+/*estilo do cabeçalho
+cor de fundo, cor do texto, adiciona preenchimento e alinhamento horizontal*/
+#cabecalho {
+    background-color: #f78425;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+/* adiciona preenchimento ao elemento guias*/
+#guias {
+    padding: 20px;
+}
+/* define a largura das imagens dos guias*/
+#guias img{
+    width: 200px;
+}
+
+.guides-list {
+    list-style: none; /* remove os marcadores de lista padrão */
+    padding: 0;
+    display: grid; /* cria layout de grade para a lista*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* cria colunas de largura flexível usando grade. */
+    gap: 20px; /* define os espaçamentos entre os itens da grade*/
+}
+
+.guides-list li {
+    border: 1px solid #ddd; /* borda sólida na cor cinza*/
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* adiciona uma sombra suave aos itens da lista */
+}
+
+.guides-list img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.guides-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.guides-list p {
+    margin-bottom: 5px;
+}
+/* ESTE É O RODAPÉ COMUM DE TODAS AS PÁGINAS FEITA PELA DUPLA */
+footer {
+    background-color: #f78425;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

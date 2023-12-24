@@ -1,0 +1,43 @@
+/* estilo do body*/
+body {
+    font-family: Arial, sans-serif; /* define o conjunto das  fontes usadas*/
+    background-color: #f0f0f0; /* cor de fundo branca*/ /*algumns itens não vou repetir a explicação pq eu ja citei a função antes*/
+    display: flex; /* modelo com layout flexível */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    height: 100vh; /* define a altura da janela */
+    margin: 0; /* remove as margens */
+}
+/*estilo da imagem*/
+img{
+    width: 70px; /* largura de 70px*/
+}
+/* estilo do container*/
+.container {
+    display: flex;
+    flex-direction: column; /* empilha os itens do container verticalmente*/
+    align-items: center; /* centraliza verticalmente o container*/
+}
+/*estilo de .message*/
+.message {
+    padding: 10px 20px; /* cria o preenchimento na mensagem */
+    margin-bottom: 10px; /* cria margem inferior para separar mensagens */
+    border-radius: 5px; /* arredonda as bordas da mensagem */
+    width: 300px; /* largura das mensagens */
+    color: #fff; 
+    font-weight: bold; /* o peso da fonte fica em negrito */
+}
+/* estilo de sucess, info e error*/
+/* as formatações seguem um padrão igual*/
+/* define a cor de fundo de cada tipo de mensagem*/
+.success {
+    background-color: #e6ab7a; 
+}
+
+.error {
+    background-color: #fa9949; 
+}
+
+.info {
+    background-color: #d80808; 
+}

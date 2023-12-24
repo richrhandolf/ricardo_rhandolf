@@ -1,0 +1,165 @@
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadatro</title>
+    <style>
+        /* Configurações gerais do corpo: definir fonte e plano de fundo gradiente */
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-image: linear-gradient(to right, rgb(255, 148, 48), rgb(231, 27, 37));
+        }
+        /* Configurações gerais da box: como cor do texto, posição em relação ao elemento, definir posição vertical e horizontal, editar largura e altura e definir fonte, cor de fundo, centralizar elementos, preenchimento, arredondar bordas  */
+        .box{
+            color: rgb(252, 252, 252);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 20px;
+            width: 40%;
+        }
+        /* Configurações gerais do corpo: preenchimento, aba suavemente transparente, largura da tela, posição na tela, arredondar borda */
+        legend{ .box{
+            color: rgb(252, 252, 252);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 20px;
+            width: 40%;
+        }
+        /* configurações; aplica uma borda sólida na cor branca, preenchimento interno centralizado, cor de fundo laranja e bordas arredondadas */
+        legend{
+            border: 1px solid rgb(253, 253, 252);
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(218, 101, 24);
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        /* config. inputUser; removendo o plano de fundo e bordas, exceto a inferior sólida branca), removendo contorno, definindo a cor do texto, ajuste de tamanho de fonte, definindo a largura e espaçamento entre letras*/
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        } 
+        /* configs da labelimput; posições, desabilita a interação do ponteiro do mouse e adiciona transição animada */
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s; /* Aplica uma transição animada */
+}
+        }
+        /* configs gerais; tamanho da fonte do rótulo é reduzido e define cor */
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput
+        {
+            top: -20px; /* quando o campo está focado ou contém um valor válido, o rótulo é movido para cima */
+            font-size: 12px;
+            color: rgb(212, 136, 36);
+        }
+        /* estilo do submit */
+        /*cor de fundo, remoção de bordas, preenchimento, cor do texto, largura, tamanho da fonte, move qualquer decoração de texto, altera o cursor do mouse para o ícone de uma mão quando passa o mouse no botão, indicando que é clicável, criação de clicabilidade do mouse, bordas arredondadas, formatação de texto e remoção da decoração de link padrão */
+        #submit{
+            background-color:rgb(218, 101, 24);
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+    
+        }
+        /* configurações para centralizar imagem */
+        img {
+            display: block;
+            margin: auto;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div id="background">
+        <video loop autoplay muted >
+            <source src="./img e vídeos/nuvens.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="box">
+        <form action="login.html" method="POST">
+            <img style="height: 40%;", width="40%", src ="./img e vídeos/logo.png" alt="png">
+            <fieldset>
+                <legend><b>Cadastre-se</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome Completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="number" name="CPF" id="CPF" class="inputUser" required>
+                    <label for="CPF" class="labelInput">CPF</label>
+                <br><br>
+                
+                <!-- <input type="button" value="Login" name="submit" id="submit"> -->
+                <a href="login.html" id="submit" onclick="validateForm()" role="button">Login</a> 
+
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+                var email = document.getElementById("email").value;
+                // Verifica se o campo de nome está vazio
+                if (email === "") {
+                alert("Por favor, preencha o campo de e-mail ");
+                return false; // Impede o envio do formulário
+                } else {
+                    return true;
+                }}
+                function validateForm() {
+                var nome = document.getElementById("nome").value;
+                // Verifica se o campo de nome está vazio
+                if (nome == "") {
+                alert("Por favor, preencha o campo de nome ");
+                return false; // Impede o envio do formulário
+                } else {
+                    return true;
+                }}
+                function validateForm() {
+                var CPF = document.getElementById("CPF").value;
+                // Verifica se o campo de nome está vazio
+                if (CPF == "") {
+                alert("Por favor, preencha o campo de senha ");
+                return false; // Impede o envio do formulário
+                } else {
+                    return true;
+                }}
+    </script>
+
+</body>
+</html>
